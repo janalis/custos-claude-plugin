@@ -5,6 +5,17 @@ a PHP inspector, fixer and formatter. It needs the `custos` binary on `PATH`
 (see the [installation guide](https://janalis.github.io/custos/guide/installation)),
 and `jq` for its hooks.
 
+## Install
+
+The plugin is listed in the marketplace of the custos repository:
+
+```sh
+claude plugin marketplace add janalis/custos
+claude plugin install custos@custos
+```
+
+Restart Claude Code after installing.
+
 ## What it runs
 
 - **MCP server**: `custos mcp` over stdio, started from the directory Claude

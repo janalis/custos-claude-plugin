@@ -1,0 +1,21 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell scripts
+        run: |
+          shellcheck -x hooks/analyse-edited-file hooks/forget-session hooks/record-project scripts/custos
+          shellcheck -s sh scripts/session-state
+          for f in hooks/analyse-edited-file hooks/forget-session hooks/record-project scripts/custos; do dash -n "$f"; done
+      - name: JSON manifests
+        run: jq -e . .claude-plugin/plugin.json hooks/hooks.json > /dev/null
