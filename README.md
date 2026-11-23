@@ -16,6 +16,10 @@ claude plugin install custos@custos
 
 Restart Claude Code after installing.
 
+The plugin's version is that of the latest custos release: a workflow checks
+every hour and updates it, so Claude Code updates the plugin with each custos
+release. Changes to the plugin reach users with the next one.
+
 ## What it runs
 
 - **MCP server**: `custos mcp` over stdio, started from the directory Claude

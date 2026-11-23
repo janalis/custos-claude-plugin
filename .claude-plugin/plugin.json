@@ -1,6 +1,7 @@
 {
   "name": "custos",
   "description": "PHP inspections, quick-fixes and formatting from custos (language server and MCP tools)",
+  "version": "0.2.5",
   "author": {
     "name": "The custos authors"
   },
