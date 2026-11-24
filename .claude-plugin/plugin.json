@@ -1,7 +1,7 @@
 {
   "name": "custos",
   "description": "PHP inspections, quick-fixes and formatting from custos (language server and MCP tools)",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "author": {
     "name": "The custos authors"
   },
@@ -11,7 +11,9 @@
   "lspServers": {
     "custos": {
       "command": "${CLAUDE_PLUGIN_ROOT}/scripts/custos",
-      "args": ["lsp"],
+      "args": [
+        "lsp"
+      ],
       "extensionToLanguage": {
         ".php": "php"
       }
@@ -20,7 +22,9 @@
   "mcpServers": {
     "custos": {
       "command": "${CLAUDE_PLUGIN_ROOT}/scripts/custos",
-      "args": ["mcp"]
+      "args": [
+        "mcp"
+      ]
     }
   }
 }
